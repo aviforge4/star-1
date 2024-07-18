@@ -1,0 +1,43 @@
+/* Hidden class */
+.hidden {
+    display: none !important;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info h4,
+.profile-info p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+/* Media Grid */
+.media-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media-grid div {
+    width: 30%;
+    margin: 10px;
+}
+
+.media-grid img,
+.media-grid video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

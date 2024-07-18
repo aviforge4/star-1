@@ -1,0 +1,64 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tab-pane {
+    padding: 20px;
+}
+
+h6 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Flexbox grid system */
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-container,
+.content-item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+}
+
+.video-container video,
+.content-item img,
+.content-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .video-container,
+    .content-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container,
+    .content-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Video player styling */
+.video-container video,
+.content-item video {
+    width: 100%;
+    height: auto;
+}

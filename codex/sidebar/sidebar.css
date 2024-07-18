@@ -1,0 +1,138 @@
+/* CSS styles for the sidebar */
+.sidebar {
+    position: fixed;
+    left: -320px; /* Initial position */
+    top: 0;
+    bottom: 0;
+    width: 320px; /* Increased width for larger screens */
+    background-color: #FFFFFF; /* White background */
+    background: linear-gradient(to bottom, #FFFFFF, #F0F2F5); /* Gradient background */
+    transition: left 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1031; /* Bootstrap modal z-index */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 16px; /* Base font size */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 20px); /* Calculate max height to fit within viewport */
+    border-radius: 0 10px 10px 0; /* Rounded right edges for modern look */
+}
+
+.sidebar.open {
+    left: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow when open */
+}
+
+.sidebar .list-group {
+    overflow-y: auto; /* Enable scrolling within the list group */
+}
+
+.sidebar .list-group-item {
+    border: none;
+    cursor: pointer;
+    color: #333333; /* Replaced blue with black */
+    background-color: #FFFFFF; /* White background */
+    text-decoration: none; /* Remove underlines */
+    font-size: 16px; /* Increased font size */
+    padding: 12px 15px; /* Increased padding */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    position: relative; /* Position for lines */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 5px; /* Rounded corners for items */
+    margin-bottom: 10px; /* Spacing between items */
+}
+
+.sidebar .list-group-item i {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.sidebar .list-group-item:hover {
+    background-color: #e0e0e0; /* Light gray for hover */
+    transform: translateY(-2px); /* Lift the item slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.close-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    color: #333333; /* Replaced blue with black */
+    font-size: 22px; /* Adjust icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.close-icon:hover {
+    color: #ff0000; /* Red color for hover */
+}
+
+/* Sub-options */
+.sidebar .sub-options {
+    display: none; /* Hide sub-options by default */
+    margin-left: 20px;
+    font-size: 14px; /* Adjust font size for sub-options */
+}
+
+.sidebar .sub-options.open {
+    display: block; /* Show sub-options when open */
+}
+
+.sidebar .list-group-item .fa-angle-down {
+    float: right; /* Position the angle icon to the right */
+    transition: transform 0.3s ease; /* Smooth transition for icon rotation */
+}
+
+.sidebar .list-group-item .fa-angle-up {
+    transform: rotate(180deg); /* Rotate icon when sub-options are open */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 280px; /* Adjusted width for medium screens */
+        left: -280px;
+    }
+
+    .sidebar .list-group-item,
+    .sidebar .sub-options {
+        font-size: 14px; /* Adjust font size for medium screens */
+        padding: 10px 12px; /* Adjusted padding */
+    }
+
+    .close-icon {
+        font-size: 20px; /* Adjust icon size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 260px; /* Adjusted width for small screens */
+        left: -260px;
+    }
+
+    .sidebar .list-group-item,
+    .sidebar .sub-options {
+        font-size: 16px; /* Adjust font size for small screens */
+        padding: 12px 14px; /* Adjusted padding */
+    }
+
+    .close-icon {
+        font-size: 18px; /* Adjust icon size for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 260px; /* Adjusted width for extra small screens */
+        left: -260px;
+    }
+
+    .sidebar .list-group-item,
+    .sidebar .sub-options {
+        font-size: 14px; /* Increased font size for extra small screens */
+        padding: 10px 12px; /* Increased padding */
+    }
+
+    .close-icon {
+        font-size: 18px; /* Adjust icon size for extra small screens */
+    }
+}

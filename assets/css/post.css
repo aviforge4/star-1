@@ -1,0 +1,210 @@
+/* Custom styles for file input */
+.custom-file-label {
+    background-color: #000; /* Black background */
+    color: #fff; /* White font color */
+    border: none; /* No border */
+    border-radius: 3px; /* Rounded corners */
+    padding: 6px 10px; /* Adjust padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    width: 150px; /* Initial width */
+    text-align: center; /* Center text */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.custom-file-label i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.custom-file-input {
+    display: none; /* Hide default file input */
+}
+
+.custom-file-label:hover, .custom-file-label:active {
+    background-color: #287dc0; /* Blue background on hover/active */
+    color: #fff; /* White text on hover/active */
+}
+
+/* Adjustments for Swiper container */
+.swiper-container {
+    width: 100%;
+    margin: 10px 0; /* Add margin for spacing */
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.swiper-slide {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 300px; /* Limit maximum height */
+    border-radius: 3px; /* Rounded corners for images */
+    margin-right: 10px; /* Add space between images */
+}
+
+.swiper-slide:last-child {
+    margin-right: 0; /* Remove margin from last slide */
+}
+
+/* Pagination styles */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Adjust this value as needed */
+    left: 0;
+    width: 100%;
+    text-align: center; /* Center the pagination bullets */
+    z-index: 10; /* Ensure bullets are above slides */
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust color as needed */
+    border-radius: 10px; /* Rounded bullets */
+    margin: 0 5px; /* Adjust space between bullets */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #000; /* Active bullet color */
+}
+
+/* Additional styles for layout adjustments */
+#selectedImages {
+    margin-bottom: 10px; /* Margin below selected images */
+}
+
+#postTitle {
+    margin-top: 20px; /* Increase margin above title */
+    font-size: 16px; /* Increase font size */
+    padding: 10px; /* Add padding for better readability */
+    width: 100%; /* Set width to 100% */
+    max-width: 800px; /* Maximum width to ensure responsiveness */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#postContent {
+    margin-top: 10px; /* Margin above content */
+    font-size: 16px; /* Increase font size */
+    padding: 10px; /* Add padding for better readability */
+    min-height: 200px; /* Increase min-height for more space */
+    width: 100%; /* Set width to 100% */
+    max-width: 800px; /* Maximum width to ensure responsiveness */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#postTags {
+    margin-top: 10px; /* Margin above tags */
+    font-size: 16px; /* Increase font size */
+    padding: 10px; /* Add padding for better readability */
+    width: 100%; /* Set width to 100% */
+    max-width: 800px; /* Maximum width to ensure responsiveness */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#postLocation {
+    margin-top: 10px; /* Margin above location */
+    font-size: 16px; /* Increase font size */
+    padding: 10px; /* Add padding for better readability */
+    width: 100%; /* Set width to 100% */
+    max-width: 800px; /* Maximum width to ensure responsiveness */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#postSchedule {
+    margin-top: 10px; /* Margin above schedule */
+}
+
+/* Styles for the Post button */
+.btn-primary {
+    background-color: #3897f0; /* Instagram blue */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold text */
+    padding: 10px 20px; /* Padding for a bigger button */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn-primary:hover {
+    background-color: #287dc0; /* Darker blue on hover */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+  }
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.custom-file-label::after {
+    content: none !important; /* Remove the "browse" text */
+}

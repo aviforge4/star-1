@@ -1,0 +1,50 @@
+/* User Posts Button */
+#userPostsBtn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#userPostsBtn:hover, #userPostsBtn:active {
+    background-color: #333;
+}
+
+/* (+) Post Button Icon */
+#togglePostFormBtn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#togglePostFormBtn:hover, #togglePostFormBtn:active {
+    background-color: #333;
+}
+
+/* Settings Icon */
+#settingsBtn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#settingsBtn:hover, #settingsBtn:active {
+    background-color: #333;
+}
+
+/* General Styles for Buttons */
+button.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn i.fas {
+    font-size: 16px;
+}

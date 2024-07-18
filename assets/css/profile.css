@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-picture-container {
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#profilePicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e2e2;
+}
+
+.edit-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.personal-info label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.personal-info input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+
+.personal-info input:disabled {
+    background-color: #f8f8f8;
+}
+
+.personal-info .edit-link {
+    text-align: right;
+    font-size: 12px;
+}
+
+.uploaded-content {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.uploaded-content h5 {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.content-item img,
+.content-item video {
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer; /* Added pointer cursor for images and videos */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.content-item img:hover,
+.content-item video:hover {
+    transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+.profile-actions {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.action-link {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    #profilePicture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 10px;
+    }
+
+    #profilePicture {
+        width: 60px;
+        height: 60px;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+
+    .edit-link,
+    .action-link {
+        font-size: 14px;
+    }
+}
+
+/* Additional Styles */
+.back-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.back-icon:hover {
+    color: #000;
+}
+
+.back-icon i {
+    margin-right: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}

@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.video-controls-left,
+.video-controls-right {
+    display: flex;
+    align-items: center;
+}
+
+.control-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.control-btn:focus {
+    outline: none;
+}
+
+.time-display {
+    color: #fff;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 5px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-bar #progress {
+    height: 100%;
+    background-color: #007bff;
+}
+
+.control-input {
+    width: 100px;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.control-input:hover {
+    opacity: 1;
+}
+
+.control-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 100%;
+    }
+    
+    .control-btn {
+        font-size: 18px;
+        margin: 0 5px;
+    }
+
+    .control-input {
+        width: 80px;
+    }
+    
+    .time-display {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-container {
+        max-width: 100%;
+    }
+    
+    .control-btn {
+        font-size: 16px;
+        margin: 0 3px;
+    }
+
+    .control-input {
+        width: 60px;
+    }
+    
+    .time-display {
+        font-size: 12px;
+    }
+}

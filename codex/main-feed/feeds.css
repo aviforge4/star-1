@@ -1,0 +1,62 @@
+/* General styling */
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: #f8f9fa; /* Light grey background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 10px 0; /* Add some padding */
+}
+
+.nav-item {
+    width: 20%;
+    text-align: center;
+}
+
+.nav-link {
+    color: #007BFF; /* Primary blue color */
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+    position: relative; /* Ensure relative positioning */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link.active {
+    color: #0056b3; /* Darker blue for active tab */
+    font-weight: bold; /* Bold text for active tab */
+    background-color: #e9ecef; /* Light background for active tab */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.nav-link i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+    position: relative; /* Ensure relative positioning */
+    top: 5px; /* Adjusted vertical alignment */
+    transition: transform 0.3s; /* Smooth icon animation */
+}
+
+/* Hover effects */
+.nav-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.nav-link i:hover {
+    transform: rotate(10deg); /* Slight rotation on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+    .nav-item {
+        width: 20%;
+    }
+}

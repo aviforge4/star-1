@@ -1,0 +1,255 @@
+/* Variables */
+:root {
+    --primary-color: #333333; /* Changed to black */
+    --secondary-color: #6c757d;
+    --bg-color: #F8F9FA; /* Light gray */
+    --text-color: #333333; /* Changed to black */
+    --border-color: transparent; /* Removed border color */
+    --hover-bg-color: #e2e6ea;
+    --navbar-bg-color: #ffffff;
+    --sidebar-bg-color: #ffffff;
+    --tab-bg-color: #ffffff;
+
+    /* Additional colors */
+    --black-color: #000000; /* Black */
+    --blue-color: #007BFF; /* Blue */
+
+    /* Additional background colors */
+    --black-bg-color: #000000; /* Black */
+    --blue-bg-color: #007BFF; /* Blue */
+}
+
+/* General styles */
+html, body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color); /* Black color for navbar brand */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color); /* Black color for nav links */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--blue-color); /* Darker shade of blue on hover */
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    border-bottom: none; /* Remove default border */
+}
+
+.nav-tabs .nav-link {
+    padding: 10px 15px;
+    font-size: 16px; /* Adjusted size */
+    color: var(--primary-color); /* Black color for tab links */
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove default border-radius */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--blue-color); /* Blue color for active tab link */
+    background-color: transparent; /* Transparent background */
+    border-bottom: 2px solid var(--blue-color); /* Bottom border when active */
+}
+
+.nav-tabs .nav-link i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+    position: relative; /* Ensure relative positioning */
+    top: 5px; /* Adjust vertical alignment */
+    color: var(--primary-color); /* Initially black icons */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.nav-tabs .nav-link.active i {
+    color: var(--blue-color); /* Blue color for active icon */
+}
+
+/* Buttons */
+.btn {
+    font-size: 14px; /* Adjusted size */
+    padding: 8px 16px; /* Padding */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+    color: #fff; /* White text */
+    background-color: var(--blue-color); /* Blue background */
+    border: none; /* No border */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn:focus, .btn.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 36px; /* Adjusted size */
+    height: 36px; /* Adjusted size */
+    border-radius: 50%; /* Circular shape */
+}
+
+/* Feed and Post Cards */
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-header .profile-photo {
+    margin-right: 10px;
+}
+
+.post-header .username {
+    font-weight: bold;
+    color: var(--blue-color); /* Blue color for username */
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-content {
+    padding: 10px;
+}
+
+.post-actions {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post-actions .btn {
+    margin-right: 10px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--blue-color); /* Blue color for headings */
+}
+
+p {
+    margin-bottom: 15px;
+    color: var(--text-color); /* Dark text */
+}
+
+/* Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 22px; /* Adjusted size for smaller screens */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 14px; /* Adjusted size for smaller screens */
+    }
+
+    .btn {
+        font-size: 12px; /* Adjusted size for smaller screens */
+        padding: 6px 12px; /* Adjusted padding for smaller screens */
+    }
+
+    .profile-photo {
+        width: 32px; /* Adjusted size for smaller screens */
+        height: 32px; /* Adjusted size for smaller screens */
+    }
+
+    .post-card {
+        margin-bottom: 15px;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted grid for smaller screens */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px; /* Adjusted size for even smaller screens */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 12px; /* Further adjusted size for smaller screens */
+    }
+
+    .btn {
+        font-size: 10px; /* Further adjusted size for smaller screens */
+        padding: 5px 10px; /* Further adjusted padding for smaller screens */
+    }
+
+    .profile-photo {
+        width: 28px; /* Further adjusted size for smaller screens */
+        height: 28px; /* Further adjusted size for smaller screens */
+    }
+
+    .post-card {
+        margin-bottom: 10px; /* Reduced margin for smaller screens */
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted grid for smallest screens */
+        gap: 10px;
+    }
+}

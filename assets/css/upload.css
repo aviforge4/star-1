@@ -1,0 +1,128 @@
+/* General Styles */
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.upload-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #007bff;
+}
+
+.upload-label i {
+    color: #fff; /* Initial icon color */
+    transition: color 0.3s; /* Transition color change */
+}
+
+.upload-label:active i {
+    color: #007bff; /* Icon color on click */
+}
+
+.upload-input {
+    display: none;
+}
+
+.video-preview,
+.img-thumbnail {
+    margin-top: 10px;
+}
+
+.video-preview {
+    width: 100%;
+    max-width: 500px;
+    display: none;
+}
+
+.img-thumbnail {
+    width: 100%;
+    max-width: 500px;
+    display: none;
+    border-radius: 5px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px; /* Increased spacing */
+}
+
+.form-control {
+    border-radius: 5px;
+    font-size: 1.1rem; /* Increase font size */
+    padding: 12px; /* Increased padding */
+    width: 100%; /* Full width */
+    border: 1px solid #000; /* Black border initially */
+    transition: border-color 0.3s; /* Smooth transition for border color change */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue border when focused */
+}
+
+#videoDescription {
+    height: 150px; /* Increased height */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#videoTags,
+#videoLocation,
+#videoDate {
+    width: 100%; /* Full width */
+}
+
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Transition color change */
+    color: #fff; /* Button text color */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #007bff; /* Button background color on hover */
+    border-color: #007bff;
+    color: #fff; /* Button text color on hover */
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .upload-preview {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .upload-label {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
